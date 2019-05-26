@@ -2,17 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageId>BlazorI18n.Provider.Json</PackageId>
+    <IsPackable>true</IsPackable>
+    <RestoreAdditionalProjectSources>
+      https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json;
+      https://dotnet.myget.org/F/blazor-dev/api/v3/index.json;
+    </RestoreAdditionalProjectSources>
+    <LangVersion>7.3</LangVersion>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <Authors>Patrick GRASSEELS</Authors>
-    <Product>BlazorI18n</Product>
-    <Description>Blazor library for I18n translations with Json provider
-
-</Description>
+    <Description>Blazor library for I18n translations with Json provider</Description>
     <PackageProjectUrl>https://github.com/Hantse/BlazorI18n</PackageProjectUrl>
     <PackageLicenseExpression></PackageLicenseExpression>
-    <Version>0.0.1-preview01</Version>
+    <Version>0.0.1-preview02</Version>
+    <PackageId>BlazorI18n.Provider.Json</PackageId>
+    <Product>BlazorI18n</Product>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

@@ -11,9 +11,7 @@
     <RazorLangVersion>3.0</RazorLangVersion>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <Authors>Patrick GRASSEELS</Authors>
-    <Description>Blazor library for I18n translations
-
-</Description>
+    <Description>Blazor library for I18n translations</Description>
     <PackageId>BlazorI18n.Core</PackageId>
     <PackageProjectUrl>https://github.com/Hantse/BlazorI18n</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
