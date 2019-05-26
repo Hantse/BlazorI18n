@@ -11,7 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BlazorI18n.Provider.Json" Version="0.0.1-preview02" />
+    <PackageReference Include="BlazorI18n.Core" Version="0.0.1-preview10" />
+    <PackageReference Include="BlazorI18n.Provider.Json" Version="0.0.1-preview05" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="3.0.0-preview5-19227-01" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="3.0.0-preview5-19227-01" PrivateAssets="all" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.DevServer" Version="3.0.0-preview5-19227-01" PrivateAssets="all" />

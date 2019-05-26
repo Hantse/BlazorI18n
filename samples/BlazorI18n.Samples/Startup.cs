@@ -1,6 +1,6 @@
+using BlazorI18n.Json;
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using BlazorI18n.Json;
 
 namespace BlazorI18n.Samples
 {

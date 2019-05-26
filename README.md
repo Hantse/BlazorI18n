@@ -1,6 +1,8 @@
 # BlazorI18n
 Blazor library for I18n translations
 
+Demo : https://blazori18n.azurewebsites.net/
+
 ## Packages
 | Name        | Version           | Build status  |
 | ------------- |:-------------:| -----|
