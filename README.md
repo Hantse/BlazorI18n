@@ -6,8 +6,8 @@ Demo : https://blazori18n.azurewebsites.net/
 ## Packages
 | Name        | Version           | Build status  |
 | ------------- |:-------------:| -----|
-| BlazorI18n.Core     | 0.0.1-preview03 | |
-| BlazorI18n.Provider.Json      | 0.0.1-preview01 | |
+| BlazorI18n.Core     | 0.0.1-preview10 | |
+| BlazorI18n.Provider.Json      | 0.0.1-preview05 | |
 
 
 ## Core package
@@ -17,9 +17,9 @@ Just implement II18n and inject at startup to provide your own services to retri
 
 ### Install with 
 #### Package manager
-> Install-Package BlazorI18n.Core -Version 0.0.1-preview03
+> Install-Package BlazorI18n.Core -Version 0.0.1-preview10
 #### Dotnet
-> dotnet add package BlazorI18n.Core --version 0.0.1-preview03
+> dotnet add package BlazorI18n.Core --version 0.0.1-preview10
 
 
 
@@ -28,9 +28,9 @@ Json package contains a service can be configure to retrive values from json.
 
 ### Install with 
 #### Package manager
-> Install-Package BlazorI18n.Provider.Json -Version 0.0.1-preview01
+> Install-Package BlazorI18n.Provider.Json -Version 0.0.1-preview05
 #### Dotnet
-> dotnet add package BlazorI18n.Provider.Json --version 0.0.1-preview01
+> dotnet add package BlazorI18n.Provider.Json --version 0.0.1-preview05
 
 ## How to use 
 Add to startup in ConfigureServices(IServiceCollection services)
