@@ -22,6 +22,7 @@
     <FileVersion>0.0.2.0</FileVersion>
     <PackageReleaseNotes>- Remove unused dependencies
 - Choose output as string or HTMLString</PackageReleaseNotes>
+    <PackageIconUrl>https://raw.githubusercontent.com/Hantse/BlazorI18n/master/BrandBlazor_nohalo_1000x.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

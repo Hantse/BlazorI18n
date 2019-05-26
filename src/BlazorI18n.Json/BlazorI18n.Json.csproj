@@ -18,6 +18,7 @@
     <PackageId>BlazorI18n.Provider.Json</PackageId>
     <Product>BlazorI18n</Product>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIconUrl>https://raw.githubusercontent.com/Hantse/BlazorI18n/master/BrandBlazor_nohalo_1000x.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
