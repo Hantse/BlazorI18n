@@ -1,24 +1,18 @@
 ﻿using BlazorI18n.Core.Models;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using System.Text;
+using BlazorI18n.Core.Services;
 using BlazorI18n.Services;
-using Microsoft.AspNetCore.Components.Builder;
-using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
-namespace BlazorI18n
+namespace BlazorI18n.Json
 {
     public static class BlazorExtensions
     {
 
         /// <summary>
-        /// Adds a singleton <see cref="II18n"/> instance to the DI <see cref="IServiceCollection"/> with the specified <see cref="BlazorI18Configuration"/>
+        /// Adds a singleton <see cref="II18n"/> instance to the DI <see cref="IServiceCollection"/> with the specified <see cref="BlazorI18JsonConfiguration"/>
         /// </summary>
-        public static IServiceCollection AddI18n(this IServiceCollection services, BlazorI18Configuration configuration)
+        public static IServiceCollection AddJsonI18n(this IServiceCollection services, BlazorI18JsonConfiguration configuration)
         {
             if (configuration == null) throw new ArgumentNullException(nameof(configuration));
 
@@ -46,16 +40,16 @@ namespace BlazorI18n
         }
 
         /// <summary>
-        /// Adds a singleton <see cref="II18n"/> instance to the DI <see cref="IServiceCollection"/> with the specified <see cref="BlazorI18Configuration"/>
+        /// Adds a singleton <see cref="II18n"/> instance to the DI <see cref="IServiceCollection"/> with the specified <see cref="BlazorI18JsonConfiguration"/>
         /// </summary>
-        public static IServiceCollection AddI18n(this IServiceCollection services, Action<BlazorI18Configuration> configure)
+        public static IServiceCollection AddJsonI18n(this IServiceCollection services, Action<BlazorI18JsonConfiguration> configure)
         {
             if (configure == null) throw new ArgumentNullException(nameof(configure));
 
-            BlazorI18Configuration options = new BlazorI18Configuration();
+            BlazorI18JsonConfiguration options = new BlazorI18JsonConfiguration();
             configure(options);
 
-            return AddI18n(services, options);
+            return AddJsonI18n(services, options);
         }
     }
 }

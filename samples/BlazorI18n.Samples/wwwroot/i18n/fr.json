@@ -1,7 +1,7 @@
 {
   "Home": "Accueil",
   "HomePage": {
-    "Subtitle": "Le sous-titre de la page d'accueil",
+    "Subtitle": "<h4>Le sous-titre de la page d'accueil</h4>",
     "Description": "Voici une super longue et cool description."
   },
   "Dashboard": "Tableau de bord"

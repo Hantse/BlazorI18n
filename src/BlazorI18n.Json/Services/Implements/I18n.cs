@@ -1,5 +1,6 @@
 ﻿using BlazorI18n.Core.Helpers;
 using BlazorI18n.Core.Models;
+using BlazorI18n.Core.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,7 +14,7 @@ namespace BlazorI18n.Services
 {
     public class I18n : II18n
     {
-        private static BlazorI18Configuration _configuration;
+        private static BlazorI18JsonConfiguration _configuration;
 
         private Dictionary<string, Dictionary<string, string>> _translations = new Dictionary<string, Dictionary<string, string>>();
         private Dictionary<string, string> _tmpTranslations = new Dictionary<string, string>();
@@ -110,7 +111,7 @@ namespace BlazorI18n.Services
         }
 
         #region Configure Static 
-        public static void Configure(BlazorI18Configuration configuration)
+        public static void Configure(BlazorI18JsonConfiguration configuration)
         {
             _configuration = configuration;
         }

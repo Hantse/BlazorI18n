@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlazorI18n.Core.Models
 {
-    public class BlazorI18Configuration
+    public class BlazorI18JsonConfiguration
     {
         public Dictionary<string, string> LocalsUri { get; set; }
         public string DefaultLocal { get; set; }

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageId>BlazorI18n.Provider.Json</PackageId>
+    <Authors>Patrick GRASSEELS</Authors>
+    <Product>BlazorI18n</Product>
+    <Description>Blazor library for I18n translations with Json provider
+
+</Description>
+    <PackageProjectUrl>https://github.com/Hantse/BlazorI18n</PackageProjectUrl>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <Version>0.0.1-preview01</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazorI18n.Core" Version="0.0.1-preview03" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+</Project>

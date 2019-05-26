@@ -1,3 +1,10 @@
 ﻿@inherits I18nElementModel
 
-@ConvertedValue
+@if (RawHtml)
+{
+    @((MarkupString)Value)
+}
+else
+{
+    @Value
+}

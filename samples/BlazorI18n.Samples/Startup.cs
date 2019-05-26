@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using BlazorI18n.Json;
 
 namespace BlazorI18n.Samples
 {
@@ -7,7 +8,7 @@ namespace BlazorI18n.Samples
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddI18n((config) =>
+            services.AddJsonI18n((config) =>
             {
                 config.DefaultLocal = "en";
                 config.LocalsUri = new System.Collections.Generic.Dictionary<string, string>

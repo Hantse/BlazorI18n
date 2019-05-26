@@ -1,6 +1,5 @@
-﻿using BlazorI18n.Services;
+﻿using BlazorI18n.Core.Services;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Html;
 using System;
 using System.Threading.Tasks;
 
@@ -14,7 +13,10 @@ namespace BlazorI18n
         [Parameter]
         private string Key { get; set; }
 
-        public HtmlString ConvertedValue { get; private set; }
+        [Parameter]
+        protected bool RawHtml { get; set; } = false;
+
+        protected string Value { get; private set; }
 
         public I18nElementModel()
         {
@@ -27,7 +29,7 @@ namespace BlazorI18n
             {
                 if (!string.IsNullOrEmpty(Key))
                 {
-                    ConvertedValue = new HtmlString(await I18n.GetValue(Key));
+                    Value = await I18n.GetValue(Key);
                     await Invoke(StateHasChanged);
                 }
             };
@@ -47,8 +49,7 @@ namespace BlazorI18n
                 throw new ArgumentNullException("Key cannot be empty or null.");
             }
 
-            ConvertedValue = new HtmlString(await I18n.GetValue(Key));
-
+            Value = await I18n.GetValue(Key);
             await base.OnAfterRenderAsync();
         }
 

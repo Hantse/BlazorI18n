@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorI18n.Services
+namespace BlazorI18n.Core.Services
 {
     public interface II18n
     {

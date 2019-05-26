@@ -1,7 +1,7 @@
 {
   "Home": "Home",
   "HomePage": {
-    "Subtitle": "The homepage subtitle",
+    "Subtitle": "<h4>The homepage subtitle</h4>",
     "Description": "This is a very good and long description about the home."
   },
   "Dashboard": "Dashboard"

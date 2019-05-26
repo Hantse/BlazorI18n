@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\BlazorI18n\BlazorI18n.csproj" />
+    <ProjectReference Include="..\..\src\BlazorI18n.Json\BlazorI18n.Json.csproj" />
   </ItemGroup>
 
 </Project>
