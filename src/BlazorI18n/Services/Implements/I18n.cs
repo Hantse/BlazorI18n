@@ -104,6 +104,11 @@ namespace BlazorI18n.Services
             return value?.ToString() ?? $"Key not found {key}:{_configuration.CurrentLocal}";
         }
 
+        public bool IsCurrentLocal(string local)
+        {
+            return _configuration.CurrentLocal.Equals(local);
+        }
+
         #region Configure Static 
         public static void Configure(BlazorI18Configuration configuration)
         {

@@ -1,14 +1,12 @@
 @inherits LayoutComponentBase
-
-<div class="sidebar">
-    <NavMenu />
-</div>
+@using BlazorI18n.Services
+@inject II18n I18nService
 
 <div class="main">
     <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+        <button class="btn mr-2 @(I18nService.IsCurrentLocal("en") ? "btn-primary":"btn-secondary")" onclick="@(() => I18nService.ChangeLocal("en"))">EN</button>
+        <button class="btn @(I18nService.IsCurrentLocal("fr") ? "btn-primary":"btn-secondary")" onclick="@(() => I18nService.ChangeLocal("fr"))">FR</button>
     </div>
-
     <div class="content px-4">
         @Body
     </div>

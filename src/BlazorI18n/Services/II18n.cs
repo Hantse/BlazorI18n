@@ -27,5 +27,7 @@ namespace BlazorI18n.Services
         /// Event trig when UI must be update when local change
         /// </summary>
         event Action OnLocalUpdateOrChange;
+
+        bool IsCurrentLocal(string local);
     }
 }

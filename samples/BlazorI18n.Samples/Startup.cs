@@ -12,8 +12,8 @@ namespace BlazorI18n.Samples
                 config.DefaultLocal = "en";
                 config.LocalsUri = new System.Collections.Generic.Dictionary<string, string>
                 {
-                    { "en", "https://livetranslatestorage.blob.core.windows.net/cdn/en.json" },
-                    { "fr", "https://livetranslatestorage.blob.core.windows.net/cdn/fr.json" }
+                    { "en", "i18n/en.json" },
+                    { "fr", "i18n/fr.json" }
                 };
                 config.CurrentLocal = "en";
             });
