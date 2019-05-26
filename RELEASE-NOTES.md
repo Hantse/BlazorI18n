@@ -18,3 +18,6 @@
 
 - version 0.0.1-preview03
   - add icon
+
+- version 0.0.1-preview04
+  - update core reference to 0.0.1-preview07
