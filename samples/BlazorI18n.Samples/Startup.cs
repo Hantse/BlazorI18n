@@ -8,7 +8,7 @@ namespace BlazorI18n.Samples
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddJsonI18n((config) =>
+            services.AddI18nJsonProvider((config) =>
             {
                 config.DefaultLocal = "en";
                 config.LocalsUri = new System.Collections.Generic.Dictionary<string, string>

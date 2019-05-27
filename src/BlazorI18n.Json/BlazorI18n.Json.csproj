@@ -14,7 +14,7 @@
     <Description>Blazor library for I18n translations with Json provider</Description>
     <PackageProjectUrl>https://github.com/Hantse/BlazorI18n</PackageProjectUrl>
     <PackageLicenseExpression></PackageLicenseExpression>
-    <Version>0.0.1-preview05</Version>
+    <Version>0.0.2-preview01</Version>
     <PackageId>BlazorI18n.Provider.Json</PackageId>
     <Product>BlazorI18n</Product>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

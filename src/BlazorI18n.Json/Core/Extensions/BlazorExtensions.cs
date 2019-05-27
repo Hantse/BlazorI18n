@@ -14,7 +14,7 @@ namespace BlazorI18n.Json
         /// <summary>
         /// Adds a singleton <see cref="II18n"/> instance to the DI <see cref="IServiceCollection"/> with the specified <see cref="BlazorI18JsonConfiguration"/>
         /// </summary>
-        public static IServiceCollection AddJsonI18n(this IServiceCollection services, BlazorI18nJsonConfiguration configuration)
+        public static IServiceCollection AddI18nJsonProvider(this IServiceCollection services, BlazorI18nJsonConfiguration configuration)
         {
             if (configuration == null) throw new ArgumentNullException(nameof(configuration));
 
@@ -23,13 +23,13 @@ namespace BlazorI18n.Json
                 throw new ArgumentException($"Locals Uri can't be null and need 1 element.");
             }
 
-            return AddJsonI18n(services, configuration);
+            return AddI18nJsonProvider(services, configuration);
         }
 
         /// <summary>
         /// Adds a singleton <see cref="II18n"/> instance to the DI <see cref="IServiceCollection"/> with the specified <see cref="BlazorI18JsonConfiguration"/>
         /// </summary>
-        public static IServiceCollection AddJsonI18n(this IServiceCollection services, Action<BlazorI18nJsonConfiguration> configure)
+        public static IServiceCollection AddI18nJsonProvider(this IServiceCollection services, Action<BlazorI18nJsonConfiguration> configure)
         {
             if (configure == null) throw new ArgumentNullException(nameof(configure));
 
