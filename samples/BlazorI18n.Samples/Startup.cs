@@ -1,6 +1,8 @@
+using Blazor.Extensions.Logging;
 using BlazorI18n.Json;
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace BlazorI18n.Samples
 {
@@ -8,6 +10,11 @@ namespace BlazorI18n.Samples
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLogging(builder => builder
+                .AddBrowserConsole() // Add Blazor.Extensions.Logging.BrowserConsoleLogger
+                .SetMinimumLevel(LogLevel.Trace)
+            );
+
             services.AddI18nJsonProvider((config) =>
             {
                 config.DefaultLocal = "en";

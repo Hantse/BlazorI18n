@@ -33,8 +33,18 @@ namespace BlazorI18n.Json
         {
             if (configure == null) throw new ArgumentNullException(nameof(configure));
 
-            services.AddI18n(configure)
-                    .AddSingleton<IValueProvider, JsonValueProvider>();
+            BlazorI18nJsonConfiguration configuration = new BlazorI18nJsonConfiguration();
+            configure.Invoke(configuration);
+
+            services.Configure(configure);
+            services.AddI18n((config) =>
+            {
+                config.CurrentLocal = configuration.CurrentLocal;
+                config.DefaultLocal = configuration.DefaultLocal;
+                config.ForceReloadLocal = configuration.ForceReloadLocal;
+            })
+            .AddSingleton<IValueProvider, JsonValueProvider>();
+
             return services;
         }
     }

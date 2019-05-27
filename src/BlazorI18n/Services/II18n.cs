@@ -54,7 +54,7 @@ namespace BlazorI18n.Core.Services
         /// <summary>
         /// Use to avoid multiple access to fetch 
         /// </summary>
-        private static SemaphoreSlim semaphoreSlim = new SemaphoreSlim(0, 1);
+        private static SemaphoreSlim semaphoreSlim = new SemaphoreSlim(1, 1);
 
         public I18n(ILogger<I18n> logger, IValueProvider valueProvider, IOptions<BlazorI18nConfiguration> options)
         {
@@ -68,6 +68,8 @@ namespace BlazorI18n.Core.Services
             await semaphoreSlim.WaitAsync();
             try
             {
+                _configuration.CurrentLocal = local;
+
                 if (_configuration.ForceReloadLocal || !_values.ContainsKey(local))
                 {
                     _currentValues = await _valueProvider.FetchValues(local);
@@ -82,6 +84,8 @@ namespace BlazorI18n.Core.Services
             {
                 semaphoreSlim.Release();
             }
+
+            OnLocalUpdateOrChange.Invoke();
         }
 
         /// <summary>
