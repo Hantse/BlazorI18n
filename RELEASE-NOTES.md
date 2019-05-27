@@ -15,9 +15,12 @@
 - version 0.0.2-preview01
   - use a options and provider approch to retrive values
 
-- version 0.0.2-preview01
+- version 0.0.2-preview02
   - fix override on current lang if options is set
 
+- version 0.0.2-preview03
+  - fix child binding object
+  - fix unset current local on change
 
 # BlazorI18n.Provider.Json
 ## Changes
@@ -36,5 +39,9 @@
 - version 0.0.2-preview01
   - implements provider for json
 
-- version 0.0.2-preview01
+- version 0.0.2-preview02
   - update core reference to 0.0.2-preview02
+
+- version 0.0.2-preview03
+  - update core reference to 0.0.2-preview03
+  - update fetch to use current value passed and not from configuration different child / parent

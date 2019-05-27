@@ -61,3 +61,6 @@ services.AddI18nJsonProvider((config) =>
 
 ```
 
+## Logger
+For logger i use this package 
+https://github.com/BlazorExtensions/Logging
