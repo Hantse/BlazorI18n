@@ -65,15 +65,21 @@ namespace BlazorI18n.Core.Services
 
         public async Task ChangeLocal(string local)
         {
-            await semaphoreSlim.WaitAsync();
+
             try
             {
+                await semaphoreSlim.WaitAsync();
+
                 _configuration.CurrentLocal = local;
 
                 if (_configuration.ForceReloadLocal || !_values.ContainsKey(local))
                 {
                     _currentValues = await _valueProvider.FetchValues(local);
                     _values[local] = _currentValues;
+                }
+                else
+                {
+                    _currentValues = _values[local];
                 }
             }
             catch (Exception)

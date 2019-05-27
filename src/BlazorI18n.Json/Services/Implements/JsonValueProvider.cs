@@ -25,7 +25,7 @@ namespace BlazorI18n.Json.Services.Implements
 
         public async Task<Dictionary<string, string>> FetchValues(string local)
         {
-            string remoteValues = await _httpClient.GetStringAsync(_configuration.LocalsUri[_configuration.CurrentLocal]);
+            string remoteValues = await _httpClient.GetStringAsync(_configuration.LocalsUri[local]);
             return JsonHelper.Flatten(remoteValues);
         }
     }
