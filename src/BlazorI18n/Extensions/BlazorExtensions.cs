@@ -25,7 +25,11 @@ namespace BlazorI18n.Extensions
                 throw new ArgumentException($"Default local must be provide.");
             }
 
-            configuration.CurrentLocal = configuration.DefaultLocal;
+            if (string.IsNullOrEmpty(configuration.CurrentLocal))
+            {
+                configuration.CurrentLocal = configuration.DefaultLocal;
+            }
+
             return AddI18n(services, configuration);
         }
 

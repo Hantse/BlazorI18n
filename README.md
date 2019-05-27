@@ -26,13 +26,16 @@ Inject your own value provider in services
 ```csharp
 ConfigureServices(IServiceCollection services){
 	services.AddSingleton<IValueProvider, MyValueProvider>();
-	services.AddI18n((config) => ...);
+	services.AddI18n((config) => {
+		config.DefaultLocal = "en";
+		config.CurrentLocal = "fr";
+	});
 }
 ```
 
 Usage in views 
 ```html
-	<I18nElement Key="HomePage.Description" />
+<I18nElement Key="HomePage.Description" />
 ```
 ## Json package
 Json package contains a service can be configure to retrive values from json.
