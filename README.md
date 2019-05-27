@@ -6,8 +6,8 @@ Demo : https://blazori18n.azurewebsites.net/
 ## Packages
 | Name        | Version           | Build status  |
 | ------------- |:-------------:| -----|
-| BlazorI18n.Core     | 0.0.2-preview02 | |
-| BlazorI18n.Provider.Json      | 0.0.2-preview02 | |
+| BlazorI18n.Core     | 0.0.2-preview03 | |
+| BlazorI18n.Provider.Json      | 0.0.2-preview03 | |
 
 
 ## Core package
@@ -16,9 +16,9 @@ Just implement IValueProvider and inject at startup to provide your own services
 
 ### Install with 
 #### Package manager
-> Install-Package BlazorI18n.Core -Version 0.0.2-preview02
+> Install-Package BlazorI18n.Core -Version 0.0.2-preview03
 #### Dotnet
-> dotnet add package BlazorI18n.Core --version 0.0.2-preview02
+> dotnet add package BlazorI18n.Core --version 0.0.2-preview03
 
 ## How to use 
 Inject your own value provider in services
@@ -41,9 +41,9 @@ Json package contains a service can be configure to retrive values from json.
 
 ### Install with 
 #### Package manager
-> Install-Package BlazorI18n.Provider.Json -Version 0.0.2-preview02
+> Install-Package BlazorI18n.Provider.Json -Version 0.0.2-preview03
 #### Dotnet
-> dotnet add package BlazorI18n.Provider.Json --version 0.0.2-preview02
+> dotnet add package BlazorI18n.Provider.Json --version 0.0.2-preview03
 
 ## How to use 
 Add to startup in ConfigureServices(IServiceCollection services)
