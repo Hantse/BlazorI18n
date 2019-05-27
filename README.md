@@ -6,20 +6,19 @@ Demo : https://blazori18n.azurewebsites.net/
 ## Packages
 | Name        | Version           | Build status  |
 | ------------- |:-------------:| -----|
-| BlazorI18n.Core     | 0.0.2-preview01 | |
-| BlazorI18n.Provider.Json      | 0.0.2-preview01 | |
+| BlazorI18n.Core     | 0.0.2-preview02 | |
+| BlazorI18n.Provider.Json      | 0.0.2-preview02 | |
 
 
 ## Core package
 Core package contains simple component with interface for provider custom value.
-
-Just implement II18n and inject at startup to provide your own services to retrives values.
+Just implement IValueProvider and inject at startup to provide your own services to retrives values.
 
 ### Install with 
 #### Package manager
-> Install-Package BlazorI18n.Core -Version 0.0.2-preview01
+> Install-Package BlazorI18n.Core -Version 0.0.2-preview02
 #### Dotnet
-> dotnet add package BlazorI18n.Core --version 0.0.2-preview01
+> dotnet add package BlazorI18n.Core --version 0.0.2-preview02
 
 ## How to use 
 Inject your own value provider in services
@@ -42,9 +41,9 @@ Json package contains a service can be configure to retrive values from json.
 
 ### Install with 
 #### Package manager
-> Install-Package BlazorI18n.Provider.Json -Version 0.0.1-preview05
+> Install-Package BlazorI18n.Provider.Json -Version 0.0.2-preview02
 #### Dotnet
-> dotnet add package BlazorI18n.Provider.Json --version 0.0.1-preview05
+> dotnet add package BlazorI18n.Provider.Json --version 0.0.2-preview02
 
 ## How to use 
 Add to startup in ConfigureServices(IServiceCollection services)
@@ -57,7 +56,7 @@ services.AddI18nJsonProvider((config) =>
 		{ "en", "i18n/en.json" },
 		{ "fr", "i18n/fr.json" }
 	};
-	config.CurrentLocal = "en";
+	config.CurrentLocal = "fr";
 });
 
 ```
